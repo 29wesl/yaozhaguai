@@ -11,7 +11,7 @@ def lookup_cgpa(mark): return next((gp for threshold, gp in reversed(CGPA_SCALE)
 if 'unit_rows' not in st.session_state:
     st.session_state.unit_rows = 4
 
-st.title("Monash WAM calculator")
+st.title("Monash WAM Calculator")
 
 with st.container():
     st.markdown("### Enter Your Unit Details")
