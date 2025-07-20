@@ -1,15 +1,5 @@
 
 import streamlit as st
-import os
-
-# Safe way to load external CSS
-css_path = "coloured buttons.css"
-if os.path.exists(css_path):
-    with open(css_path) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-else:
-    st.warning("CSS file not found. Button styling will not be applied.")
-    
 import pandas as pd
 
 GPA_SCALE = [(0, 0.3), (45, 0.7), (50, 1.0), (60, 2.0), (70, 3.0), (80, 4.0)]
@@ -21,7 +11,7 @@ def lookup_cgpa(mark): return next((gp for threshold, gp in reversed(CGPA_SCALE)
 if 'unit_rows' not in st.session_state:
     st.session_state.unit_rows = 4
 
-st.title("WAM Calculator")
+st.title("Monash WAM calculator")
 
 with st.container():
     st.markdown("### Enter Your Unit Details")
