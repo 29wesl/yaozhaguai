@@ -113,7 +113,7 @@ if st.button("Compute Required Average Mark"):
         if required_mark > 100:
             st.warning(
                 f"To reach a WAM of {target_wam:.1f}%, you’d need an average of "
-                f"**{required_mark:.2f}%** across your remaining {units_left} units :( )"
+                f"**{required_mark:.2f}%** across your remaining {units_left} units :("
             )
         elif required_mark < 0:
             st.success("You’ve already secured the target WAM.")
